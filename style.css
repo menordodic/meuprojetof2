@@ -1,0 +1,133 @@
+/* Default styles for all devices */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300;1,600&display=swap');
+
+:root {
+    --cor10: #000000;
+    --cor30: rgb(56, 120, 216);
+    --cor70: #4843da;
+    --branco: rgb(255, 255, 255);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(18, 51, 51);
+}
+
+h1,
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor30);
+    padding: 25px;
+}
+
+header a {
+    color: var(--branco);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+main {
+    display: flex;
+    flex-grow: 3;
+    height: 80vh;
+    width: 80vw;
+    margin: 30px auto;
+}
+
+footer {
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-self: center;
+}
+
+section h2,
+section p {
+    color: var(--branco);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+section h2 {
+    font-size: 2em;
+}
+
+#btn {
+    width: 50%;
+    margin: 1em 0;
+    background-color: var(--cor10);
+    color: var(--branco);
+    padding: 1em;
+    border-radius: 7px;
+    text-align: center;
+}
+
+#btn:hover {
+    background-color: var(--cor30);
+}
+
+figure {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+@media (max-width: 700px) {
+    header {
+        display: inline-block;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 30px;
+        justify-content: center;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    section p {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    #btn {
+        margin: 1em auto;
+    }
+}
+
+
